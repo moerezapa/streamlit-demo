@@ -84,7 +84,7 @@ if sl.button("Dapatkan Prediksi"):
        'Distinct Called Numbers', 'Tariff Plan', 'Status', 'Age',
        'Customer Value']
     
-    data = np.array([call_failure_input, complain_input, subscription_length_input, charge_amount_input, second_of_use_input, frequency_of_use_input, total_sms_input, distinct_number_input, tariff_plan_input, status_input, age_input, cust_value_input]).reshape(1,-1)
+    data = np.array([call_failure_input, complain_input, subscription_length_input, int(charge_amount_input), second_of_use_input, frequency_of_use_input, total_sms_input, distinct_number_input, tariff_plan_input, status_input, int(age_input), int(cust_value_input)]).reshape(1,-1)
     data_df = pd.DataFrame(data, columns = feature_list)
 
     # sl.write(f"Data: {sl.session_state['feature_scaling'].transform(data_df)}")
